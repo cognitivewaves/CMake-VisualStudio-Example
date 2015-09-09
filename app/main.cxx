@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "Simple/SimpleFunctions.h"
-#include "Advanced/AdvancedFunctions.h"
+#include "simple/SimpleFunctions.h"
+#include "advanced/AdvancedFunctions.h"
 
 int main (int argc, char *argv[])
 {

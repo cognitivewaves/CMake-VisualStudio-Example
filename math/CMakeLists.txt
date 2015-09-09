@@ -5,7 +5,7 @@ file (GLOB MATH_SOURCES
 
 # Collect sources into the variable SIMPLE_FUNCTION_SOURCES  
 file (GLOB SIMPLE_FUNCTION_SOURCES
-      "simple/*.h",
+      "simple/*.h"
       "simple/*.cxx")
 
 # Another way to collect sources into a variable ADVANCED_FUNCTION_SOURCES
@@ -33,4 +33,5 @@ set_property(TARGET math PROPERTY FOLDER "libraries")
 
 # Adds logic to INSTALL.vcproj to copy math.dll to the destination directory
 install (TARGETS math
-		 RUNTIME DESTINATION ${PROJECT_BINARY_DIR}/bin)
+		 RUNTIME DESTINATION ${PROJECT_BINARY_DIR}/bin
+		 LIBRARY DESTINATION ${PROJECT_BINARY_DIR}/bin)

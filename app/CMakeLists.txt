@@ -1,5 +1,5 @@
 # Properties->C/C++->General->Additional Include Directories
-include_directories ("${PROJECT_SOURCE_DIR}/Math")
+include_directories ("${PROJECT_SOURCE_DIR}/math")
 
 # Set Properties->General->Configuration Type to Application(.exe)
 # Creates app.exe with the listed sources (main.cxx)
