@@ -20,3 +20,11 @@ message ("cxx Flags: " ${CMAKE_CXX_FLAGS})
 # Sub-directories where more CMakeLists.txt exist
 add_subdirectory(app)
 add_subdirectory (math)
+
+# Turn on CMake testing capabilities
+enable_testing()
+
+# Add test cases
+add_test(AppTest1 ${PROJECT_BINARY_DIR}/bin/app.exe 100)
+add_test(AppTest2 ${PROJECT_BINARY_DIR}/bin/app.exe 200)
+add_test(AppTest3 ${PROJECT_BINARY_DIR}/bin/app.exe 300)

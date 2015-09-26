@@ -23,7 +23,7 @@ double mysqrt(double x)
         }
         delta = x - (result*result);
         result = result + 0.5*delta/result;
-        fprintf(stdout,"Computing sqrt of %g to be %g\n",x,result);
+        //fprintf(stdout,"Computing sqrt of %g to be %g\n",x,result);
     }
     return result;
 }
