@@ -31,7 +31,11 @@ add_library(math SHARED ${MATH_SOURCES} ${SIMPLE_FUNCTION_SOURCES} ${ADVANCED_FU
 # Creates a folder "libraries" and adds target project (math.vcproj) under it
 set_property(TARGET math PROPERTY FOLDER "libraries")
 
+# Properties->General->Output Directory
+set_target_properties(math PROPERTIES
+                      RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+
 # Adds logic to INSTALL.vcproj to copy math.dll to the destination directory
 install (TARGETS math
-		 RUNTIME DESTINATION ${PROJECT_BINARY_DIR}/bin
-		 LIBRARY DESTINATION ${PROJECT_BINARY_DIR}/bin)
+         RUNTIME DESTINATION ${PROJECT_SOURCE_DIR}/_install
+         LIBRARY DESTINATION ${PROJECT_SOURCE_DIR}/_install)

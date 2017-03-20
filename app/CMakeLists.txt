@@ -13,6 +13,10 @@ target_link_libraries (app  math)
 # project (app.vcproj) under it
 set_property(TARGET app PROPERTY FOLDER "executables")
 
+# Properties->General->Output Directory
+set_target_properties(app PROPERTIES
+                      RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+
 # Adds logic to INSTALL.vcproj to copy app.exe to destination directory
 install (TARGETS app
-		 RUNTIME DESTINATION ${PROJECT_BINARY_DIR}/bin)
+         RUNTIME DESTINATION ${PROJECT_SOURCE_DIR}/_install)
